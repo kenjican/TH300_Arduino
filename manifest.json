@@ -1,0 +1,14 @@
+{
+  "name":"TH300 Controller",
+  "description":"To controll devices through Chrome",
+  "version":"0.1",
+  "app":{
+     "background":{
+	    "scripts":["background.js"]
+	 }
+  },
+  "icons":{
+  "128":"TH300.png"
+  },
+  "permissions":["serial"]
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html><head>
+  <input>
+  
+  <meta charset="UTF-8">
+
+  
+  <script src="DIDO.js"></script>
+  
+  <script src="jqry214.js"></script>
+  
+  <script src="TH300.js"></script>
+</head><body>
+<table style="width: 100%; height: 20%;" border="0">
+
+  <tbody>
+    <tr>
+      <td colspan="4" style="width: 30%; background-color: rgb(255, 102, 102); height: 55%; text-align: center; vertical-align: middle;" id="TPV"> <br>
+      </td>
+      <td colspan="4" style="width: 50%; background-color: rgb(102, 255, 255); height: 55%; text-align: center; vertical-align: middle;" id="HPV">
+      <h3 align="center">%</h3>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 12.5%; background-color: rgb(255, 102, 102); font-weight: bold; text-align: center; height: 10%;"><big><big><big>目
+标值</big></big></big></td>
+      <td style="width: 12.5%; background-color: rgb(255, 102, 102);" id="TSV"><br>
+      </td>
+      <td style="width: 12.5%; background-color: rgb(255, 102, 102); font-weight: bold; text-align: center;"><big><big><big>输
+出值</big></big></big></td>
+      <td style="width: 12.5%; background-color: rgb(255, 102, 102);" id="TMV"><br>
+      </td>
+      <td style="background-color: rgb(102, 255, 255); text-align: center;"><big><big><big>目
+标值</big></big></big></td>
+      <td style="background-color: rgb(102, 255, 255); height: 15%; width: 12%;" id="HSV"><br>
+      </td>
+      <td style="background-color: rgb(102, 255, 255); text-align: center;"><big><big><big>输
+出值</big></big></big></td>
+      <td style="background-color: rgb(102, 255, 255); width: 12%;" id="HMV"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><input value="运转" onclick="run();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="vertical-align: top;"><input value="停止" onclick="stop();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="vertical-align: top;"><input value="时间同步" onclick="synctime();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="vertical-align: top;"><input value="STEP" onclick="steps();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="vertical-align: top;"><input value="网路设定" onclick="SetNet();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 50%; background-color: rgb(255, 102, 102);" id="DIAlarm"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+<br>
+
+<table>
+
+  <tbody>
+    <tr>
+      <td style="width: 8%;">
+      <h3>DO</h3>
+      </td>
+      <td id="DO"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td style="width: 8%;">
+      <h3>T</h3>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 8%;">
+      <h3>OC/DI</h3>
+      </td>
+      <td id="OC"><br>
+      </td>
+      <td id="DI"><br>
+      </td>
+      <td><br>
+      </td>
+      <td style="width: 8%;">
+      <h3>IS</h3>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 8%;">
+      <h2>定值/程序</h2>
+      </td>
+      <td id="FP"><br>
+      </td>
+      <td id="RH"><br>
+      </td>
+      <td id="RM"><br>
+      </td>
+      <td style="width: 8%;">
+      <h3>TS</h3>
+      </td>
+      <td id="SRH"><br>
+      </td>
+      <td id="SRM"><br>
+      </td>
+      <td id="SSH"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(102, 255, 255); text-align: center;" bgcolor="#000000"> <input value="运转" onclick="run();" style="height: 80px; width: 150px;" type="button"> </td>
+      <td id="HSV" style="background-color: rgb(102, 255, 255); height: 15%;" bgcolor="#000000"><input value="停止" onclick="stop();" style="height: 80px; width: 150px;" type="button"> </td>
+      <td style="background-color: rgb(102, 255, 255); text-align: center;" bgcolor="#000000"><input value="时间同步" onclick="synctime();" style="height: 80px; width: 150px;" type="button"> </td>
+      <td id="HMV" style="background-color: rgb(102, 255, 255);" bgcolor="#000000"><input value="STEP" onclick="steps();" style="height: 80px; width: 150px;" type="button"></td>
+      <td style="width: 8%;"><input value="网路设定" onclick="SetNet();" style="height: 80px; width: 150px;" type="button">
+      <h3>SA/PA</h3>
+      </td>
+      <td id="RSNo"><br>
+      </td>
+      <td id="PRRNo"><br>
+      </td>
+      <td id="PRSNo"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+
+  <tbody>
+    <tr>
+      <td>MAC</td>
+      <td><input id="netsp[0]" type="text"></td>
+      <td><input id="netsp[1]" type="text"></td>
+      <td><input id="netsp[2]" type="text"></td>
+      <td><input id="netsp[3]" type="text"></td>
+      <td><input id="netsp[4]" type="text"></td>
+      <td><input id="netsp[5]" type="text"></td>
+    </tr>
+    <tr>
+      <td>IP</td>
+      <td><input id="netsp[6]" type="text"></td>
+      <td><input id="netsp[7]" type="text"></td>
+      <td><input id="netsp[8]" type="text"></td>
+      <td><input id="netsp[9]" type="text"></td>
+    </tr>
+    <tr>
+      <td>DNS</td>
+      <td><input id="netsp[10]" type="text"></td>
+      <td><input id="netsp[11]" type="text"></td>
+      <td><input id="netsp[12]" type="text"></td>
+      <td><input id="netsp[13]" type="text"></td>
+    </tr>
+    <tr>
+      <td>Gateway</td>
+      <td><input id="netsp[14]" type="text"></td>
+      <td><input id="netsp[15]" type="text"></td>
+      <td><input id="netsp[16]" type="text"></td>
+      <td><input id="netsp[17]" type="text"></td>
+    </tr>
+    <tr>
+      <td>subnet</td>
+      <td><input id="netsp[18]" type="text"></td>
+      <td><input id="netsp[19]" type="text"></td>
+      <td><input id="netsp[20]" type="text"></td>
+      <td><input id="netsp[21]" type="text"></td>
+      <br>
+    </tr>
+  </tbody>
+</table>
+
+<input maxlength="25" id="SMS1"><input value="SMS內容" onclick="SetSMS();" style="height: 80px; width: 150px;" type="button">
+</body></html>

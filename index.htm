@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="serial13.js"></script>
+
+</head>
+<body>
+<H1>TH300 Serial TEST </H1>
+<select id="port"></select>
+					<select id="baudrate" class="form-control">
+						<option value="115200">115200</option>
+						<option value="57600">57600</option>
+						<option value="38400">38400</option>
+						<option value="19200" selected>19200</option>
+						<option value="9600">9600</option>
+						<option value="4800">4800</option>
+						<option value="2400">2400</option>
+						<option value="1800">1800</option>
+						<option value="1200">1200</option>
+						<option value="600">600</option>
+						<option value="300">300</option>
+						<option value="200">200</option>
+						<option value="150">150</option>
+						<option value="134">134</option>
+						<option value="110">110</option>
+						<option value="75">75</option>
+						<option value="50">50</option>
+					</select>
+<select id="parity">
+<option value = "none">None</option>
+<option value = "odd">奇位</option>
+<option value= "even">偶位</option>
+</select>
+
+<button id="connect">Connect</button>
+<input type="text" id="meirei">
+<button id="sendc">SEND</button><BR>
+<BR><BR><BR>
+<textarea id="output" rows="20" style="width:500px;height:500px;"></textarea>
+</body>
+</html>

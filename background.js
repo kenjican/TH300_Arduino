@@ -1,0 +1,11 @@
+chrome.app.runtime.onLaunched.addListener(function(){
+	debugger;
+  chrome.app.window.create('index.htm',{
+    'bounds':{
+	  'width':400,
+	  'height':400,
+	  'top':0,
+	  'left':0
+	}
+  });
+});
